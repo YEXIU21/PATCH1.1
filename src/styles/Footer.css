@@ -1,5 +1,5 @@
 .footer {
-  background-color: transparent;
+  background-color: rgba(13, 17, 23, 0.4);
   color: var(--text-muted);
   padding: 60px 0 30px;
   border-top: 1px solid var(--border-color);
@@ -152,7 +152,7 @@
 .footer-bottom {
   border-top: 1px solid var(--tertiary);
   padding-top: 30px;
-  background-color: rgba(13, 17, 23, 0.7);
+  background-color: rgba(13, 17, 23, 0.4);
   padding: 30px 20px;
   border-radius: var(--radius-lg);
   backdrop-filter: blur(5px);
