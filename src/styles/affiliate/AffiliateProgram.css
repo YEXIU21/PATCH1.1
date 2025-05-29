@@ -1,0 +1,295 @@
+.affiliate-container {
+  color: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.affiliate-container .hero-section {
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(13, 17, 23, 0.3) 100%);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.affiliate-container .gradient-text {
+  color: white;
+  font-weight: 600;
+}
+
+.affiliate-container .highlight-text {
+  color: #ffcc00;
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+.affiliate-container .step-paper {
+  background-color: #1a1a2e !important;
+  border-radius: 12px;
+  overflow: visible !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.affiliate-container .step-paper:hover {
+  transform: translateY(-5px);
+}
+
+.affiliate-container .MuiAvatar-root {
+  z-index: 1;
+}
+
+.affiliate-container .step-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.affiliate-container .step-icon {
+  background-color: #1a1a2e;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.affiliate-container .step-icon svg {
+  color: white;
+  font-size: 2rem;
+}
+
+.affiliate-container .vision-mission-paper {
+  background-color: #1a1a2e !important;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.affiliate-container .vision-box, .affiliate-container .mission-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.affiliate-container .icon-container {
+  background-color: #1a1a2e;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.affiliate-container .icon-container svg {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.affiliate-container .benefit-card {
+  background-color: #1a1a2e !important;
+  border-radius: 12px;
+  height: 100%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.affiliate-container .benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.affiliate-container .benefit-card h5 {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.affiliate-container .benefit-card p {
+  color: white;
+  font-weight: normal;
+}
+
+.affiliate-container .login-card {
+  background-color: #1a1a2e !important;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.affiliate-container .MuiTextField-root {
+  margin-bottom: 1rem;
+}
+
+.affiliate-container .MuiTextField-root .MuiOutlinedInput-root {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.affiliate-container .MuiTextField-root .MuiInputLabel-root {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.affiliate-container .MuiTextField-root .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.affiliate-container .MuiTextField-root .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.affiliate-container .MuiTextField-root .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #ff9a00;
+}
+
+/* Scoped link styles for affiliate container only */
+.affiliate-container a {
+  color: #ff9a00;
+  text-decoration: none;
+}
+
+.affiliate-container a:hover {
+  text-decoration: underline;
+}
+
+.affiliate-container .MuiButton-contained {
+  font-weight: bold !important;
+  text-transform: uppercase;
+  background-color: #ff9a00 !important;
+  color: white !important;
+  border-radius: 50px !important;
+}
+
+.affiliate-container .MuiButton-contained:hover {
+  background-color: #ffb340 !important;
+}
+
+@media (max-width: 768px) {
+  .affiliate-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .affiliate-container .hero-section {
+    padding: 1rem;
+  }
+
+  .affiliate-container h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  
+  .affiliate-container .highlight-text {
+    font-size: 2rem;
+    display: inline-block;
+  }
+  
+  .affiliate-container .step-paper {
+    margin-bottom: 0.5rem;
+  }
+  
+  .affiliate-container .step-content {
+    padding: 1rem;
+  }
+  
+  .affiliate-container .step-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .affiliate-container .step-icon svg {
+    font-size: 1.5rem;
+  }
+  
+  .affiliate-container .vision-mission-paper {
+    padding: 1rem;
+  }
+  
+  .affiliate-container .vision-box, 
+  .affiliate-container .mission-box {
+    padding: 1rem;
+  }
+  
+  .affiliate-container .icon-container {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .affiliate-container .icon-container svg {
+    font-size: 1.8rem;
+  }
+  
+  .affiliate-container h3,
+  .affiliate-container h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .affiliate-container h5 {
+    font-size: 1.2rem;
+  }
+  
+  .affiliate-container h6 {
+    font-size: 1rem;
+    line-height: 1.3;
+    word-wrap: break-word;
+  }
+  
+  .affiliate-container .MuiButton-contained {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .affiliate-container .MuiTypography-body1,
+  .affiliate-container .MuiTypography-body2 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .affiliate-container h2 {
+    font-size: 1.5rem;
+  }
+  
+  .affiliate-container .highlight-text {
+    font-size: 1.8rem;
+  }
+  
+  .affiliate-container .step-content {
+    padding: 0.75rem;
+  }
+  
+  .affiliate-container .step-paper {
+    margin-bottom: 0.5rem;
+  }
+  
+  .affiliate-container .MuiButton-contained {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .affiliate-container .login-card form {
+    padding: 0;
+  }
+  
+  .affiliate-container .login-card .MuiBox-root {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .affiliate-container .login-card .MuiBox-root .MuiTypography-body2 {
+    margin-bottom: 0.5rem;
+  }
+} 

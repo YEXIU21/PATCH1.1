@@ -1,0 +1,280 @@
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: var(--primary);
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 260px; /* Match the width of admin sidebar */
+  z-index: 998;
+  box-shadow: var(--shadow-md);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.header-title h1 svg {
+  margin-right: 8px;
+}
+
+.header-title p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.notification-container {
+  position: relative;
+  margin-right: 10px;
+}
+
+.notification-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.notification-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.notification-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--error);
+  color: white;
+  font-size: 10px;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.notification-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background-color: var(--background-medium);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.notification-dropdown h3 {
+  margin: 0;
+  padding: 15px;
+  border-bottom: 1px solid var(--tertiary);
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.notification-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.notification-item {
+  padding: 15px;
+  border-bottom: 1px solid var(--tertiary);
+}
+
+.notification-message {
+  margin: 0 0 5px;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.notification-time {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.mark-all-read {
+  width: 100%;
+  padding: 12px;
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+}
+
+.mark-all-read:hover {
+  background-color: var(--secondary);
+}
+
+.header-action-button {
+  background: none;
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.header-action-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Search dropdown styles */
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background-color: var(--background-medium);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  width: 400px;
+  z-index: 1000;
+  padding: 15px;
+}
+
+.global-search-bar {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary);
+  border-radius: var(--radius-md);
+  padding: 10px 15px;
+  width: 100%;
+}
+
+.global-search-bar svg {
+  color: var(--text-muted);
+  margin-right: 10px;
+}
+
+.global-search-bar input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  color: var(--text-primary);
+  font-size: 16px;
+}
+
+/* Admin profile styles */
+.admin-profile {
+  margin-left: 15px;
+  position: relative;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: var(--transition);
+}
+
+.profile-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.profile-button svg {
+  margin-right: 5px;
+}
+
+.profile-button span {
+  font-weight: 500;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .admin-header {
+    left: 0;
+    width: 100%;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .header-actions {
+    gap: 5px;
+  }
+  
+  .search-dropdown {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  
+  .header-title p {
+    display: none;
+  }
+  
+  .profile-button span {
+    display: none;
+  }
+  
+  .notification-dropdown {
+    width: 280px;
+    right: -100px;
+  }
+} 

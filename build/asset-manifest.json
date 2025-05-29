@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d5bb65a6.css",
+    "main.js": "/static/js/main.0cf29367.js",
+    "static/js/453.e5407da2.chunk.js": "/static/js/453.e5407da2.chunk.js",
+    "static/media/cashbonanza.png": "/static/media/cashbonanza.8c92d1db0307403cffed.png",
+    "static/media/sugarrush.jpg": "/static/media/sugarrush.4623c85d5dc058334365.jpg",
+    "static/media/sweetbonaza.png": "/static/media/sweetbonaza.441a73bf4f44105407fa.png",
+    "static/media/superace.png": "/static/media/superace.feb27b5f3647d50f7454.png",
+    "static/media/luckyfortunes.png": "/static/media/luckyfortunes.a1a16a858ea9cb4a98a5.png",
+    "static/media/ProfilePicture.jpg": "/static/media/ProfilePicture.2e6e6e3dc613f119e7b4.jpg",
+    "static/media/banner1.png": "/static/media/banner1.9df8f99bfb2bbf51d5c1.png",
+    "static/media/VIP LOGO.png": "/static/media/VIP LOGO.6e0076efe4fe88c4cc39.png",
+    "static/media/banner3.png": "/static/media/banner3.0015fc6d52a5a3883e51.png",
+    "static/media/banner2.jpg": "/static/media/banner2.ff89bdc587b047076c3e.jpg",
+    "static/media/gatesofolympus.jpg": "/static/media/gatesofolympus.4119169c9df3c12bed48.jpg",
+    "static/media/mainicon.png": "/static/media/mainicon.a76cb7dc7859699597c9.png",
+    "static/media/fortunegems.jpg": "/static/media/fortunegems.0b8363710eda9b96e5b1.jpg",
+    "static/media/pagcor.svg": "/static/media/pagcor.547a3ef80fe58323aae37845be1e34ff.svg",
+    "index.html": "/index.html",
+    "main.d5bb65a6.css.map": "/static/css/main.d5bb65a6.css.map",
+    "main.0cf29367.js.map": "/static/js/main.0cf29367.js.map",
+    "453.e5407da2.chunk.js.map": "/static/js/453.e5407da2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5bb65a6.css",
+    "static/js/main.0cf29367.js"
+  ]
+}

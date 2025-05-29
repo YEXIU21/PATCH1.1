@@ -1,0 +1,136 @@
+.affiliate-registration-container {
+  color: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.affiliate-registration-container .registration-paper {
+  background-color: #1a1a2e !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.affiliate-registration-container .success-paper {
+  background-color: #1a1a2e !important;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.affiliate-registration-container .MuiStepLabel-label {
+  color: white !important;
+}
+
+.affiliate-registration-container .MuiStepLabel-iconContainer .MuiStepIcon-root {
+  color: #ff9a00 !important;
+}
+
+.affiliate-registration-container .MuiStepLabel-iconContainer .MuiStepIcon-root.Mui-completed {
+  color: #4caf50 !important;
+}
+
+.affiliate-registration-container .MuiStepContent-root {
+  border-left-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.affiliate-registration-container .MuiTextField-root {
+  margin-bottom: 1rem;
+}
+
+.affiliate-registration-container .MuiTextField-root .MuiOutlinedInput-root {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.affiliate-registration-container .MuiTextField-root .MuiInputLabel-root {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.affiliate-registration-container .MuiTextField-root .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.affiliate-registration-container .MuiTextField-root .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.affiliate-registration-container .MuiTextField-root .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #ff9a00;
+}
+
+.affiliate-registration-container .MuiFormLabel-root {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.affiliate-registration-container .MuiRadio-root {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.affiliate-registration-container .MuiRadio-root.Mui-checked {
+  color: #ff9a00 !important;
+}
+
+.affiliate-registration-container .MuiCheckbox-root {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.affiliate-registration-container .MuiCheckbox-root.Mui-checked {
+  color: #ff9a00 !important;
+}
+
+/* Scope link styles to affiliate registration container */
+.affiliate-registration-container .MuiLink-root {
+  color: #ff9a00 !important;
+  text-decoration: none;
+}
+
+.affiliate-registration-container .MuiLink-root:hover {
+  text-decoration: underline;
+}
+
+.affiliate-registration-container a {
+  color: #ff9a00;
+  text-decoration: none;
+}
+
+.affiliate-registration-container a:hover {
+  text-decoration: underline;
+}
+
+.affiliate-registration-container .MuiButton-outlined {
+  color: white !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  border-radius: 50px !important;
+}
+
+.affiliate-registration-container .MuiButton-outlined:hover {
+  border-color: white !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.affiliate-registration-container .MuiButton-contained {
+  background-color: #ff9a00 !important;
+  color: white !important;
+  border-radius: 50px !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+}
+
+.affiliate-registration-container .MuiButton-contained:hover {
+  background-color: #ffb340 !important;
+}
+
+.affiliate-registration-container .MuiTypography-caption {
+  color: #f44336 !important;
+  font-weight: bold !important;
+}
+
+.affiliate-registration-container .MuiTypography-body2 {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+@media (max-width: 768px) {
+  .affiliate-registration-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+} 

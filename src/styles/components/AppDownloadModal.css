@@ -1,0 +1,351 @@
+.app-download-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease;
+  transition: all 0.5s ease;
+}
+
+.app-download-overlay.shrinking {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.app-download-overlay.shrunk {
+  background-color: transparent;
+  backdrop-filter: none;
+  pointer-events: none;
+}
+
+.app-download-modal {
+  background-color: #19203a;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 300px;
+  padding: 25px 20px;
+  position: relative;
+  overflow: hidden;
+  animation: zoomIn 0.4s ease;
+  transition: all 0.5s ease;
+  pointer-events: auto;
+}
+
+.app-download-modal.shrinking {
+  transform: scale(0.75) translateY(-15vh);
+  opacity: 0.9;
+}
+
+.app-download-modal.shrunk {
+  transform: scale(0.75);
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  left: auto;
+  max-width: 260px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: none;
+  cursor: pointer;
+  opacity: 0.9;
+  z-index: 1100;
+}
+
+.app-download-modal.shrunk:hover {
+  opacity: 1;
+  transform: scale(0.77);
+}
+
+/* Hide some elements when shrinking or shrunk */
+.app-download-modal.shrinking .app-download-subtitle,
+.app-download-modal.shrinking .app-device-support,
+.app-download-modal.shrunk .app-download-subtitle,
+.app-download-modal.shrunk .app-device-support,
+.app-download-modal.shrunk .download-icon-container,
+.app-download-modal.shrinking .download-icon-container {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.app-download-modal.shrunk .app-download-subtitle,
+.app-download-modal.shrunk .app-device-support,
+.app-download-modal.shrunk .download-icon-container {
+  display: none;
+}
+
+.app-download-modal.shrinking .app-download-title,
+.app-download-modal.shrunk .app-download-title {
+  font-size: 20px;
+  margin-bottom: 12px;
+  transition: font-size 0.3s ease;
+}
+
+.app-download-modal.shrinking .download-now-button,
+.app-download-modal.shrunk .download-now-button {
+  padding: 10px 16px;
+  font-size: 15px;
+  margin-bottom: 0;
+  transition: all 0.3s ease;
+}
+
+.app-download-modal.shrinking .close-button,
+.app-download-modal.shrunk .close-button {
+  top: 8px;
+  right: 8px;
+  padding: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Pulse animation for the modal */
+.app-download-modal.pulse:not(.shrunk):not(.shrinking) {
+  animation: pulse 2s infinite;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.close-button:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.app-download-title {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 8px;
+  text-align: center;
+  font-weight: 600;
+  transition: font-size 0.3s ease;
+}
+
+.app-download-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 15px;
+  transition: opacity 0.3s ease;
+}
+
+.download-icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  transition: opacity 0.3s ease;
+}
+
+.big-download-icon {
+  font-size: 36px;
+  color: #ff9a00;
+  animation: floatIcon 2s ease-in-out infinite;
+}
+
+.download-button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-text {
+  line-height: 1;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  padding: 0;
+}
+
+.download-icon {
+  margin-right: 8px;
+}
+
+.app-download-modal.shrinking .download-icon,
+.app-download-modal.shrunk .download-icon {
+  margin-right: 6px;
+}
+
+.app-download-modal.shrinking .download-now-button,
+.app-download-modal.shrunk .download-now-button {
+  width: 92%;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.download-now-button {
+  background-color: #ff9a00;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 154, 0, 0.4);
+  width: 85%;
+}
+
+.download-now-button:hover {
+  background-color: #ffb340;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 154, 0, 0.5);
+}
+
+.app-download-modal.shrunk .download-now-button:hover {
+  transform: translateY(-2px);
+}
+
+.download-now-button.pulse-button:not(.shrunk):not(.shrinking) {
+  animation: buttonPulse 2s infinite;
+}
+
+.app-device-support {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 13px;
+  transition: opacity 0.3s ease;
+}
+
+.app-promo-image {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.app-promo-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { 
+    opacity: 0; 
+    transform: scale(0.8);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(75, 105, 255, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(255, 106, 77, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 106, 77, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(255, 106, 77, 0.4);
+  }
+}
+
+@keyframes floatIcon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .app-download-modal {
+    max-width: 280px;
+    padding: 20px 15px;
+  }
+  
+  .app-download-title {
+    font-size: 20px;
+  }
+  
+  .app-download-subtitle {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .big-download-icon {
+    font-size: 32px;
+  }
+  
+  .download-now-button {
+    padding: 10px 20px;
+    font-size: 15px;
+    width: 90%;
+  }
+  
+  .app-download-modal.shrinking,
+  .app-download-modal.shrunk {
+    max-width: 220px;
+    top: 60px;
+    right: 10px;
+    padding: 16px;
+  }
+  
+  .app-download-modal.shrinking .app-download-title,
+  .app-download-modal.shrunk .app-download-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .app-download-modal.shrinking .download-now-button,
+  .app-download-modal.shrunk .download-now-button {
+    padding: 8px 15px;
+    font-size: 14px;
+    width: 92%;
+  }
+} 

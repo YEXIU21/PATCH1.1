@@ -1,0 +1,209 @@
+/* VIP Status Bar Styles */
+.vip-logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+}
+
+/* Horizontal layout for logo and status bar - keeping for potential future use */
+.vip-logo-wrapper.horizontal {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+}
+
+.vip-logo-image {
+  display: block;
+  position: relative;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+/* Remove bottom margin when in horizontal layout */
+.vip-logo-wrapper.horizontal .vip-logo-image {
+  margin-bottom: 0;
+}
+
+.vip-status-container {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 0;
+  margin-left: -25px;
+  z-index: 2;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile specific status container */
+.vip-status-container.mobile {
+  width: 90%;
+  height: 5px;
+  margin-left: -20px;
+  margin-bottom: 3px;
+}
+
+/* Small mobile specific status container */
+.vip-status-container.small-mobile {
+  width: 80%;
+  height: 3px;
+  margin-left: -10px;
+  margin-bottom: 2px;
+}
+
+/* Horizontal status container styles - keeping for potential future use */
+.vip-status-container.horizontal {
+  width: 80px;
+  height: 10px;
+  margin-left: 0;
+  transform: none;
+  margin-top: 0;
+  margin-right: 5px;
+}
+
+.vip-status-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, 
+                             rgba(255, 255, 255, 0.2) 0%,
+                             rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+}
+
+.vip-status-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #ffa000 0%, #ff6d00 100%);
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* High better status */
+.vip-status-bar.high-better {
+  background: linear-gradient(90deg, #ffc107 0%, #ff9800 100%);
+  box-shadow: 0 0 15px rgba(255, 152, 0, 0.8);
+}
+
+/* Glowing animation for high betters */
+.vip-status-bar.high-better::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(-20deg);
+  animation: glowingEffect 1.5s infinite;
+}
+
+@keyframes glowingEffect {
+  0% {
+    left: -30px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Add pulsing effect for high betters */
+.vip-status-bar.high-better {
+  animation: pulseEffect 2s infinite alternate;
+}
+
+@keyframes pulseEffect {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 152, 0, 0.9);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .vip-logo-image {
+    margin-bottom: 5px;
+  }
+  
+  .vip-logo-wrapper.horizontal .vip-logo-image {
+    margin-bottom: 0;
+  }
+  
+  .vip-status-container {
+    height: 6px;
+    width: 100%;
+    margin-left: -30px;
+  }
+  
+  .vip-status-container.horizontal {
+    width: 70px;
+    height: 8px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .vip-logo-image {
+    margin-bottom: 4px;
+  }
+  
+  .vip-logo-wrapper.horizontal .vip-logo-image {
+    margin-bottom: 0;
+  }
+  
+  .vip-status-container {
+    height: 5px;
+    width: 100%;
+    margin-left: -35px;
+  }
+  
+  .vip-status-container.mobile {
+    width: 85%;
+    height: 4px;
+    margin-left: -15px;
+  }
+  
+  .vip-status-container.small-mobile {
+    width: 75%;
+    height: 3px;
+    margin-left: -8px;
+  }
+  
+  .vip-status-container.horizontal {
+    width: 50px;
+    height: 6px;
+    margin-left: 0;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .vip-logo-image {
+    margin-bottom: 3px;
+  }
+  
+  .vip-status-container.mobile {
+    width: 80%;
+    height: 3px;
+    margin-left: -10px;
+  }
+  
+  .vip-status-container.small-mobile {
+    width: 70%;
+    height: 2px;
+    margin-left: -5px;
+  }
+} 

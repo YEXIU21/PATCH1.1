@@ -1,0 +1,260 @@
+.rewards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.rewards-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.rewards-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-right: 15px;
+}
+
+.rewards-header h1 {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.rewards-summary {
+  margin-bottom: 40px;
+}
+
+.rewards-card {
+  background-color: var(--background-medium);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.rewards-card-header {
+  background-color: var(--secondary);
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.rewards-card-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--text-primary);
+}
+
+.rewards-card-content {
+  padding: 20px;
+}
+
+.rewards-status {
+  margin-bottom: 25px;
+}
+
+.rewards-level {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.rewards-level svg {
+  color: #ffc107;
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.rewards-level h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #ffc107;
+}
+
+.rewards-progress {
+  margin-top: 15px;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: var(--tertiary);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-hover) 100%);
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+.rewards-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.points-item {
+  background-color: var(--secondary);
+  padding: 15px;
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.points-label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.points-value {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.rewards-levels {
+  margin-bottom: 40px;
+}
+
+.rewards-levels h2 {
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.levels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.level-card {
+  background-color: var(--background-medium);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.level-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.level-card.bronze .level-header {
+  background: linear-gradient(135deg, #cd7f32, #e9be9d);
+}
+
+.level-card.silver .level-header {
+  background: linear-gradient(135deg, #c0c0c0, #e6e6e6);
+}
+
+.level-card.gold .level-header {
+  background: linear-gradient(135deg, #ffd700, #ffecb3);
+}
+
+.level-card.platinum .level-header {
+  background: linear-gradient(135deg, #e5e4e2, #ffffff);
+}
+
+.level-header {
+  padding: 15px;
+  text-align: center;
+}
+
+.level-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--background-dark);
+  margin-bottom: 5px;
+}
+
+.level-points {
+  font-size: 0.9rem;
+  color: var(--background-dark);
+  opacity: 0.8;
+}
+
+.level-benefits {
+  padding: 15px;
+}
+
+.level-benefits h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.level-benefits ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+.level-benefits li {
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.rewards-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.rewards-actions .btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .rewards-points {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .levels-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .rewards-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .rewards-icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rewards-container {
+    padding: 20px 15px;
+  }
+  
+  .rewards-header h1 {
+    font-size: 1.6rem;
+  }
+  
+  .rewards-level h3 {
+    font-size: 1.5rem;
+  }
+  
+  .points-value {
+    font-size: 1.5rem;
+  }
+  
+  .levels-grid {
+    grid-template-columns: 1fr;
+  }
+} 

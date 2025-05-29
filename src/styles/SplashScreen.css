@@ -1,0 +1,305 @@
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0c0c14;
+  background-image: linear-gradient(135deg, #0c0c14 0%, #1a1a2e 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.splash-screen.fade-out {
+  opacity: 0;
+}
+
+.logo-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.floating-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: float 2.5s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.7));
+}
+
+.glow-effect {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.4) 0%, rgba(255, 140, 0, 0.2) 40%, rgba(255, 0, 0, 0) 70%);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+  z-index: 1;
+}
+
+.sparkles {
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  z-index: 3;
+  transform: translate(-33%, -33%);
+}
+
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: sparkle-fade 2s ease-in-out infinite;
+  box-shadow: 0 0 10px 2px rgba(255, 215, 0, 0.5);
+}
+
+/* Welcome text styling */
+.welcome-text {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-top: 20px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+  position: relative;
+  z-index: 5;
+  opacity: 0;
+  animation: text-appear 1s ease-in forwards;
+  animation-delay: 0.5s;
+}
+
+.welcome-text span {
+  display: inline-block;
+  animation: letter-float 2s ease-in-out infinite;
+}
+
+.welcome-text span:nth-child(1) { animation-delay: 0.0s; }
+.welcome-text span:nth-child(2) { animation-delay: 0.1s; }
+.welcome-text span:nth-child(3) { animation-delay: 0.2s; }
+.welcome-text span:nth-child(4) { animation-delay: 0.3s; }
+.welcome-text span:nth-child(5) { animation-delay: 0.4s; }
+.welcome-text span:nth-child(6) { animation-delay: 0.5s; }
+.welcome-text span:nth-child(7) { animation-delay: 0.6s; }
+
+/* Casino chips flying around */
+.casino-chip {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e61c1c 0%, #b71c1c 100%);
+  border: 2px dashed #fff;
+  animation: chip-fly 4s linear infinite;
+  opacity: 0.7;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.casino-chip::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+/* Add 5 casino chips with different colors and animations */
+.splash-screen::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1976d2 0%, #0d47a1 100%);
+  border: 2px dashed #fff;
+  animation: chip-fly-1 5s linear infinite;
+  z-index: 1;
+}
+
+.splash-screen::after {
+  content: '';
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #388e3c 0%, #1b5e20 100%);
+  border: 2px dashed #fff;
+  animation: chip-fly-2 6s linear infinite;
+  z-index: 1;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) scale(1.05) rotate(2deg);
+  }
+  50% {
+    transform: translateY(0) scale(1.1) rotate(0deg);
+  }
+  75% {
+    transform: translateY(10px) scale(1.05) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+}
+
+@keyframes sparkle-fade {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes chip-fly-1 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(60vw, -30vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes chip-fly-2 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-40vw, -40vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes chip-fly {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(calc(50vw - 50%), calc(-30vh - 50%)) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes text-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes letter-float {
+  0% {
+    transform: translateY(0);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+  }
+  50% {
+    transform: translateY(-5px);
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.9), 0 0 30px rgba(255, 140, 0, 0.3);
+  }
+  100% {
+    transform: translateY(0);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+  }
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .logo-container {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+  }
+  
+  .welcome-text {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+  }
+  
+  .welcome-text {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+} 

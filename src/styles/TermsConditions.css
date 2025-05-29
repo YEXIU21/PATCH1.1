@@ -1,0 +1,114 @@
+.terms-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    color: var(--text-secondary);
+    background-color: var(--background-medium);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.terms-title {
+    color: var(--text-primary);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.terms-last-updated {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+.terms-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--tertiary);
+}
+
+.terms-section:last-child {
+    border-bottom: none;
+}
+
+.terms-section h2 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.terms-section p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.terms-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.terms-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.terms-contact {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.terms-contact li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+.terms-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--tertiary);
+    text-align: center;
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 20px 15px;
+    }
+    
+    .terms-title {
+        font-size: 1.6rem;
+    }
+    
+    .terms-section h2 {
+        font-size: 1.2rem;
+    }
+    
+    .terms-section p,
+    .terms-list li,
+    .terms-contact li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .terms-container {
+        padding: 15px 12px;
+    }
+    
+    .terms-title {
+        font-size: 1.4rem;
+    }
+    
+    .terms-section h2 {
+        font-size: 1.1rem;
+    }
+    
+    .terms-list {
+        padding-left: 15px;
+    }
+} 

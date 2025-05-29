@@ -1,0 +1,490 @@
+.content-management-container {
+  background-color: var(--background-medium);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.content-tabs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.content-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: none;
+  border: 1px solid var(--tertiary);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.content-tab:hover {
+  background-color: var(--secondary);
+  color: var(--text-primary);
+}
+
+.content-tab.active {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Make the banner tab more visible when selected */
+.content-tab[class*="active"] {
+  color: #ffffff;
+  background-color: rgba(255, 154, 0, 0.4);
+}
+
+/* Ensure the Banners tab is properly visible */
+.content-tab:nth-child(3) {
+  color: var(--text-primary);
+}
+
+.content-tab svg {
+  font-size: 18px;
+}
+
+.content-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.content-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.content-search svg {
+  position: absolute;
+  left: 12px;
+  color: var(--text-muted);
+}
+
+.content-search input {
+  padding: 10px 12px 10px 40px;
+  border: 1px solid var(--tertiary);
+  border-radius: var(--radius-md);
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+  width: 250px;
+}
+
+.add-content-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.add-content-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.content-form {
+  background-color: var(--background-dark);
+  border: 1px solid var(--tertiary);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.content-form h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--tertiary);
+  border-radius: var(--radius-md);
+  background-color: var(--secondary);
+  color: var(--text-primary);
+  font-family: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cancel-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: transparent;
+  border: 1px solid var(--tertiary);
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cancel-button:hover {
+  background-color: var(--secondary);
+  color: var(--text-primary);
+}
+
+.save-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.save-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.save-button:disabled {
+  background-color: var(--tertiary);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.content-table-container {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.content-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--tertiary);
+  vertical-align: middle;
+}
+
+/* Column widths and alignment */
+.content-table th:nth-child(1) { width: 30%; text-align: left; } /* Title */
+.content-table th:nth-child(2) { width: 12%; text-align: center; } /* Type */
+.content-table th:nth-child(3) { width: 12%; text-align: center; } /* Status */
+.content-table th:nth-child(4) { width: 15%; text-align: left; } /* Language */
+.content-table th:nth-child(5) { width: 15%; text-align: left; } /* Last Updated */
+.content-table th:nth-child(6) { width: 16%; text-align: center; } /* Actions */
+
+.content-table td:nth-child(1) { text-align: left; } /* Title cell */
+.content-table td:nth-child(2) { text-align: center; } /* Type cell */
+.content-table td:nth-child(3) { text-align: center; } /* Status cell */
+.content-table td:nth-child(4) { text-align: left; } /* Language cell */
+.content-table td:nth-child(5) { text-align: left; } /* Last Updated cell */
+.content-table td:nth-child(6) { text-align: center; } /* Actions cell */
+
+/* Make badges consistent width */
+.content-type, .content-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 500;
+  min-width: 80px;
+  text-align: center;
+  margin: 0 auto;
+  user-select: text;
+  cursor: text;
+  color: #ffffff;
+}
+
+/* Type badges */
+/* Removing all previous Banner type styles */
+
+.content-type.page {
+  background-color: rgba(80, 71, 229, 0.6);
+  color: #ffffff;
+}
+
+.content-type.carousel {
+  background-color: rgba(247, 185, 85, 0.6);
+  color: #ffffff;
+}
+
+.content-type.promotion {
+  background-color: rgba(255, 71, 87, 0.6);
+  color: #ffffff;
+}
+
+/* Completely new banner style with no inheritance */
+.type-banner-label {
+  display: inline-block !important;
+  width: 80px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  background-color: #33ab5c !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+/* Status badges */
+.content-status.published {
+  background-color: rgba(63, 185, 80, 0.6);
+  color: #ffffff;
+}
+
+.content-status.draft {
+  background-color: rgba(139, 148, 158, 0.6);
+  color: #ffffff;
+}
+
+.content-status.scheduled {
+  background-color: rgba(247, 185, 85, 0.6);
+  color: #ffffff;
+}
+
+/* Action buttons container */
+.content-actions-cell {
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5px 0;
+  width: auto;
+}
+
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: var(--transition);
+  margin: 0 2px;
+}
+
+.action-button svg {
+  font-size: 18px;
+}
+
+.action-button.edit {
+  color: var(--primary);
+}
+
+.action-button.edit:hover {
+  background-color: var(--primary-light);
+}
+
+.action-button.delete {
+  color: var(--error);
+}
+
+.action-button.delete:hover {
+  background-color: rgba(255, 71, 87, 0.1);
+}
+
+.action-button.save {
+  color: var(--success);
+}
+
+.action-button.save:hover {
+  background-color: rgba(63, 185, 80, 0.1);
+}
+
+.no-content {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 30px !important;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1024px) {
+  .content-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .content-tabs {
+    width: 100%;
+  }
+  
+  .content-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .content-search input {
+    width: 200px;
+  }
+  
+  .content-table {
+    min-width: 800px; /* Ensure table doesn't collapse too much on small screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .content-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .content-search {
+    width: 100%;
+  }
+  
+  .content-search input {
+    width: 100%;
+  }
+  
+  .add-content-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.content-table th {
+  color: #ffffff;
+  font-weight: 600;
+  background-color: var(--secondary);
+  padding: 15px 16px;
+  text-transform: uppercase;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.content-table th:nth-child(2), 
+.content-table th:nth-child(3), 
+.content-table th:nth-child(6) {
+  text-align: center !important;
+}
+
+.content-table td {
+  padding: 12px 16px;
+  vertical-align: middle;
+  user-select: text !important;
+  cursor: text;
+}
+
+.content-type.carousel,
+.content-type.page,
+.content-type.promotion {
+  display: inline-block;
+  width: 80px;
+  margin: 0 auto;
+  text-align: center;
+  user-select: text;
+  cursor: text;
+  color: #ffffff;
+}
+
+/* Removing all banner type styles since we're using a new class name */
+
+.content-status.published,
+.content-status.draft,
+.content-status.scheduled {
+  display: inline-block;
+  width: 80px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content-table tr:hover {
+  background-color: var(--secondary);
+}
+
+.content-table tr.editing {
+  background-color: var(--primary-light);
+}
+
+/* When the content type is a banner, we need a special style */
+.content-type.banner {
+  background-color: rgba(255, 154, 0, 0.6);
+  color: white;
+} 
