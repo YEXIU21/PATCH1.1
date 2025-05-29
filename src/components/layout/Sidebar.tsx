@@ -252,15 +252,17 @@ const Sidebar: React.FC = () => {
                 </button>
               </div>
             
-              <div className="profile-header">
-                <div className="profile-avatar">
-                  <div className="profile-initial">U</div>
+              {isMobile ? (
+                <div className="profile-header">
+                  <div className="profile-avatar">
+                    <img src={ProfilePicture} alt="User" />
+                  </div>
+                  <div className="profile-details">
+                    <div className="profile-name">Player VIP</div>
+                    <div className="profile-level">Player VIP</div>
+                  </div>
                 </div>
-                <div className="profile-details">
-                  <div className="profile-name">User</div>
-                  <div className="profile-level">Player VIP</div>
-                </div>
-              </div>
+              ) : null}
               
               <div className="profile-balance-section">
                 <div className="balance-label">Balance</div>
